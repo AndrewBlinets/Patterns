@@ -13,13 +13,22 @@ public class Main {
         TestSinglenton.getInstance().print();
         TestSinglenton.getInstance().print();
 
-        SelectorCar carSelector = new SelectorCar();
+        /*SelectorCar carSelector = new SelectorCar();
         System.out.println("Germania");
         Car car = carSelector.getCar(TypeCar.GERMANIA);
         car.start();
         car.stop();
         System.out.println("Russia");
         car = carSelector.getCar(TypeCar.RUSSIA);
+        car.start();
+        car.stop();*/
+
+        System.out.println("Germania");
+        Car car = SelectorCar.getInstance().getCar(TypeCar.GERMANIA);
+        car.start();
+        car.stop();
+        System.out.println("Russia");
+        car = SelectorCar.getInstance().getCar(TypeCar.RUSSIA);
         car.start();
         car.stop();
     }
